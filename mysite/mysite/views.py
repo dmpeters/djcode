@@ -8,7 +8,7 @@ import datetime
 
 def hello(request):
     # say hello
-    return HttpResponse("Hello world")
+    return HttpResponse("Hello, welcome to my %s page" % request.path)
 
 # current_datetime w/o template
 def current_datetime(request):

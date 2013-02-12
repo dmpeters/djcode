@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Book Search{% endblock %}
+
+{% block content %}
+    <h4>Search</h4>
+
+    {% if errors %}
+    <ul>
+        {% for error in errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <form action="" method="get">
+        <input type="text" name="book">
+        <input type="submit" value="Search">
+    </form>
+
+{% endblock %}
