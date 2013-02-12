@@ -37,10 +37,5 @@ def hours_ahead(request, hours):
         raise Http404()
 
     dt = datetime.datetime.now() + datetime.timedelta(hours=hours)
-    html = "<html><body>In %s hour(s), it will be %s.</body></html>" % (hours, dt)
+    return render_to_response('hours_ahead.html', {'hours_offset': hours, 'next_time': dt})
 
-    # At any point in your view, temporarily insert an assert False to trigger the error page. 
-    # Then you can view the local variables and state of the program.
-    # assert False
-
-    return HttpResponse(html)
