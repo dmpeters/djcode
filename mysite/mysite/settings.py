@@ -123,6 +123,9 @@ INSTALLED_APPS = (
 
     # books
     'mysite.books',
+
+    # contact
+    'mysite.contact',
 )
 
 # A sample logging configuration. The only tangible logging
